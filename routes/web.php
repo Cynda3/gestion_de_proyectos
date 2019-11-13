@@ -12,5 +12,17 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('/layouts/app');
 });
+
+Route::get('/empleados/index', function () {
+    return view('empleados/index');
+})->name('empleados');
+
+Route::get('/proyectos/index', function () {
+    return view('proyectos/index');
+})->name('proyectos');
+
+Route::get('/departamentos/index', function () {
+    return view('departamentos/index');
+})->name('departamentos');
