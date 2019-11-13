@@ -12,10 +12,12 @@
       <th>Nombre</th>
     </tr>
 
-    <tr>
-      <td>Aqui el id</td>
-      <td>Aqui el nombre</td>
-    </tr>
+      @foreach($departamentos as $departamento)
+      <tr>
+        <td>{{$departamento->id}}</td>
+        <td>{{$departamento->nombre}}</td>
+      </tr>
+      @endforeach
 
   </table>
 

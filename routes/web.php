@@ -12,17 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('/layouts/app');
+    return view('welcome');
 });
 
-Route::get('/empleados/index', function () {
-    return view('empleados/index');
-})->name('empleados');
+Route::get('/empleados', 'EmpleadoController@index')->name('empleado.index');
 
-Route::get('/proyectos/index', function () {
-    return view('proyectos/index');
-})->name('proyectos');
+Route::get('/proyectos', 'ProyectoController@index')->name('proyecto.index');
 
-Route::get('/departamentos/index', function () {
-    return view('departamentos/index');
-})->name('departamentos');
+Route::get('/departamentos', 'DepartamentoController@index')->name('departamento.index');
