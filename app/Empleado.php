@@ -15,6 +15,11 @@ class Empleado extends Model
     }
 
     
+
+
+
+
+    
     public function departamento()
     {
         return $this->hasOne('App\Departamento');

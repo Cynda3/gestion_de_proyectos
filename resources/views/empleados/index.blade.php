@@ -13,6 +13,7 @@
         <th>Apellido</th>
         <th>Email</th>
         <th>Telefono</th>
+        <th>Proyecto</th>
       </tr>
 
       @foreach($empleados as $empleado)
@@ -22,6 +23,10 @@
         <td>{{$empleado->apellido}}</td>
         <td>{{$empleado->email}}</td>
         <td>{{$empleado->telefono}}</td>
+        <td>@if($empleado->proyecto)
+          {{$empleado->proyecto->id}}
+          @endif
+        </td>
       </tr>
       @endforeach
 
