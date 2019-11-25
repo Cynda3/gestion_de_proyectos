@@ -25,7 +25,7 @@ class ProyectoController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
@@ -47,7 +47,8 @@ class ProyectoController extends Controller
      */
     public function show($id)
     {
-        //
+        $proyecto = Proyecto::find($id);
+        return view('proyectos/show')->with('proyecto',$proyecto);
     }
 
     /**

@@ -1,0 +1,17 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[user]
+	email = andergonzalez33@gmail.com
+	name = cynda3
+[remote "origin"]
+	url = https://github.com/Cynda3/gestion_de_proyectos.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+[branch "responsable_proyecto"]
+	remote = origin
+	merge = refs/heads/responsable_proyecto

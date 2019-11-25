@@ -1,0 +1,7 @@
+0000000000000000000000000000000000000000 97c96f042d66cd76208c8fdb1ff7ae31a27cee34 cynda3 <andergonzalez33@gmail.com> 1573631417 +0100	commit (initial): First commit
+97c96f042d66cd76208c8fdb1ff7ae31a27cee34 a31de6405a8b3748e4d5e3ea6af647de0a90188d cynda3 <andergonzalez33@gmail.com> 1573631912 +0100	commit: migraciones creadas
+a31de6405a8b3748e4d5e3ea6af647de0a90188d 0afcd86dc483c5563bc613c24e122db6d85ecb04 cynda3 <andergonzalez33@gmail.com> 1573633945 +0100	commit: vistas implementadas
+0afcd86dc483c5563bc613c24e122db6d85ecb04 53ad4f0db41e3687925e8df5f7532c2071262e87 cynda3 <andergonzalez33@gmail.com> 1573635086 +0100	commit: migraciones hechas
+53ad4f0db41e3687925e8df5f7532c2071262e87 7abd2d349e138b92ac60040855037cafba6a0e5d cynda3 <andergonzalez33@gmail.com> 1573636743 +0100	commit: Seeders hechos
+7abd2d349e138b92ac60040855037cafba6a0e5d 8cb438258cf8f2ebc6642250cfd70128d3d39104 cynda3 <andergonzalez33@gmail.com> 1573638818 +0100	commit: Lista bien
+8cb438258cf8f2ebc6642250cfd70128d3d39104 afc0b9a773fd8510143183baa5a76fe0341dcb16 cynda3 <andergonzalez33@gmail.com> 1573802007 +0100	commit: Relaciones hechas

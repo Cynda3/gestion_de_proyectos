@@ -15,8 +15,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/empleados', 'EmpleadoController@index')->name('empleado.index');
+Route::resource('proyectos', 'ProyectoController')->only([
+    'index', 'show', 'create', 'store', 'delete'
+]);
 
-Route::get('/proyectos', 'ProyectoController@index')->name('proyecto.index');
-
-Route::get('/departamentos', 'DepartamentoController@index')->name('departamento.index');
+Route::resource('empleados', 'EmpleadoController')->only([
+    'index', 'show', 'create', 'store', 'delete'
+]);
+Route::resource('departamentos', 'DepartamentoController')->only([
+    'index', 'show', 'create', 'store', 'delete'
+]);
