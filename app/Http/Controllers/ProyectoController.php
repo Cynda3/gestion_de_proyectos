@@ -25,7 +25,7 @@ class ProyectoController extends Controller
      */
     public function create()
     {
-        
+        return view('proyectos/create');
     }
 
     /**
@@ -36,7 +36,18 @@ class ProyectoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // Creo un nuevo objeto 'producto'
+        $proyecto = new Proyecto;
+        // Guardo cada parametro del formulario en el respectivo campo del objeto
+        $proyecto->nombre = $request->nombre;
+        $proyecto->titulo = $request->titulo;
+        $proyecto->fechainicio = $request->fechainicio;
+        $proyecto->fechafin = $request->fechafin;
+        $proyecto->horasestimadas = $request->horasestimadas;
+        // Guardo el objeto
+        $product->save();
+        // Vuelvo a la vista tienda con un mensaje de confirmación de que se ha creado correctamente el producto
+        return back();
     }
 
     /**

@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 Route::resource('proyectos', 'ProyectoController')->only([
-    'index', 'show', 'create', 'store', 'delete'
+    'index', 'show', 'create', 'store', 'edit', 'update', 'delete'
 ]);
 
 Route::resource('empleados', 'EmpleadoController')->only([

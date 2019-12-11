@@ -4,7 +4,7 @@
 
 @section('content')
 
-  <h2>Empleados</h2>
+  <h2>Departamentos</h2>
 
   <ul>
     <li>Id: {{$departamento->id}}</li>
