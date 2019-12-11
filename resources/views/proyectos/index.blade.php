@@ -5,6 +5,7 @@
 @section('content')
 
   <h2>Proyectos</h2>
+  <a href="{{route('proyectos.create')}}">Añadir proyecto</a>
 
     <table>
       <tr>
@@ -25,13 +26,16 @@
         <td>{{$proyecto->fechainicio}}</td>
         <td>{{$proyecto->fechafin}}</td>
         <td>{{$proyecto->horasestimadas}}</td>
-        <!-- 
-          Mirar en el modelo(proyecto) a ver si esta bien relacionado 
-          y llamar a la funcion para poder acceder a los atributos del otro modelo(empleado) 
-        -->
-        <td>{{$proyecto->empleado->nombre}}</td>
-        <td><a href="">Editar</a></td>
-        <td><a href="">Eliminar</a></td>
+        <td>@if($proyecto->empleado)
+          {{$proyecto->empleado->nombre}}
+          @endif
+        </td>
+        <td><a href="{{route('proyectos.edit', $proyecto->id)}}">Editar</a></td>
+        <form action="{{route('proyectos.destroy', $proyecto->id)}}" method="post">
+          @csrf
+          @METHOD('delete');
+          <td><button>Eliminar</button></td>
+        </form>
       </tr>
       @endforeach
     </table>

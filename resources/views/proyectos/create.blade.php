@@ -6,18 +6,18 @@
 
   <h2>Crear nuevo proyecto</h2>
 
-  <form action="proyectos.store" method="post">
+  <form action="{{route('proyectos.store')}}" method="post">
     @csrf
-    <label>Nombre</label>
-    <input type="text" name="nombre">
-    <label>Titulo</label>
-    <input type="text" name="titulo">
-    <label>Fecha de inicio</label>
-    <input type="date" name="fechainicio">
-    <label>Fecha fin</label>
-    <input type="date" name="fechafin">
-    <label>Horas estimadas</label>
-    <input type="number" name="horasestimadas">
+    <label>Nombre</label><br>
+    <input type="text" name="nombre"><br>
+    <label>Titulo</label><br>
+    <input type="text" name="titulo"><br>
+    <label>Fecha de inicio</label><br>
+    <input type="date" name="fechainicio"><br>
+    <label>Fecha fin</label><br>
+    <input type="date" name="fechafin"><br>
+    <label>Horas estimadas</label><br>
+    <input type="number" name="horasestimadas"><br>
     <input type="submit" name="submit" value="Submit">
   </form>
 

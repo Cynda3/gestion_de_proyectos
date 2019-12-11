@@ -13,7 +13,9 @@
     <li>Fecha de inicio: {{$proyecto->email}}</li>
     <li>Fecha de fin: {{$proyecto->telefono}}</li>
     <li>Horas estimadas: {{$proyecto->horasestimadas}}</li>
-    <li>Empleado responsable: {{$proyecto->empleado->nombre}}</li>
+    @if($proyecto->empleado)
+      <li>Empleado responsable: {{$proyecto->empleado->nombre}}</li>
+    @endif
   </ul>
 
 @endsection

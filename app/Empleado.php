@@ -15,10 +15,6 @@ class Empleado extends Model
     }
 
     
-
-
-
-
     
     public function departamento()
     {
