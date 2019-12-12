@@ -25,8 +25,9 @@
         <td>{{$proyecto->fechainicio}}</td>
         <td>{{$proyecto->fechafin}}</td>
         <td>{{$proyecto->horasestimadas}}</td>
-        <td>@if($proyecto->empleado)
-          {{$proyecto->empleado->nombre}}
+        <td>
+          @if($proyecto->empleado)
+          <a href="{{route('empleados.show', $proyecto->empleado->id)}}">{{$proyecto->empleado->nombre}}</a>
           @endif
         </td>
         <td><a href="{{route('proyectos.edit', $proyecto->id)}}">Editar</a></td>

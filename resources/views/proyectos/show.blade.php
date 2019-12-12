@@ -16,6 +16,12 @@
     @if($proyecto->empleado)
       <li>Empleado responsable: {{$proyecto->empleado->nombre}}</li>
     @endif
+    <li>Empleados en este proyecto:</li>
+    @if($proyecto->empleados)
+      @foreach($proyecto->empleados as $proemp)
+        <li><a href="{{route('empleados.show', $proemp->id)}}">{{$proemp->nombre}}</a> desde {{$proemp->pivot->fechainicio}} hasta {{$proemp->pivot->fechafin}}</li>
+      @endforeach
+    @endif
   </ul>
 
 @endsection

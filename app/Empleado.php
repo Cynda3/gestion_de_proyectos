@@ -14,10 +14,15 @@ class Empleado extends Model
         return $this->hasOne('App\Proyecto');
     }
 
+    public function proyectos()
+    {
+    	return $this->belongsToMany('App\Proyecto');
+    }
+
     
     
     public function departamento()
     {
-        return $this->hasOne('App\Departamento');
+        return $this->belongsTo('App\Departamento');
     }
 }

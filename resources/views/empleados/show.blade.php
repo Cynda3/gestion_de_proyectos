@@ -13,6 +13,12 @@
     <li>Email: {{$empleado->email}}</li>
     <li>Telefono: {{$empleado->telefono}}</li>
     <li>Proyecto: {{$empleado->proyecto->nombre}}</li>
+    <li>Proyectos con este empleado:</li>
+    @if($empleado->proyectos)
+      @foreach($empleado->proyectos as $emppro)
+        <li><a href="{{route('proyectos.show', $emppro->id)}}">{{$emppro->nombre}}</a></li>
+      @endforeach
+    @endif
   </ul>
 
 @endsection
