@@ -36,6 +36,15 @@ class ProyectoController extends Controller
      */
     public function store(Request $request)
     {
+        // Validaciones
+        $request->validate([
+            'nombre'=>'required|min:2|max:50',
+            'titulo'=>'required|min:5|max:50',
+            'fechainicio'=>'date|required',
+            'fechafin'=>'date|required|after_or_equal_:fechainicio',
+            'horasestimadas'=>'numeric|required'
+        ]);
+
         // Creo un nuevo objeto 'proyecto'
         $proyecto = new Proyecto;
         // Guardo cada parametro del formulario en el respectivo campo del objeto
@@ -83,6 +92,14 @@ class ProyectoController extends Controller
      */
     public function update(Request $request, $id)
     {
+        // Validaciones
+        $request->validate([
+            'titulo'=>'required|min:5|max:50',
+            'fechainicio'=>'date|required',
+            'fechafin'=>'date|required|after_or_equal_:fechainicio',
+            'horasestimadas'=>'numeric|required'
+        ]);
+
         // Busco el objeto proyecto que quiero editar
         $proyecto = Proyecto::where('id',$id)->first();
         // Actualizo cada parametro del formulario en el respectivo campo del objeto

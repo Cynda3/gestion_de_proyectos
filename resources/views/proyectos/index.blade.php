@@ -6,7 +6,6 @@
 
   <h2>Proyectos</h2>
   <a href="{{route('proyectos.create')}}">Añadir proyecto</a>
-
     <table>
       <tr>
         <th>Id</th>
@@ -33,7 +32,7 @@
         <td><a href="{{route('proyectos.edit', $proyecto->id)}}">Editar</a></td>
         <form action="{{route('proyectos.destroy', $proyecto->id)}}" method="post">
           @csrf
-          @METHOD('delete');
+          @METHOD('delete')
           <td><button>Eliminar</button></td>
         </form>
       </tr>
